@@ -1,7 +1,8 @@
 export const showRepoInfo = (array, container) => {
     array.forEach(item => {
-
-        const { name, visibility, description, topics, language, homepage, git_url } = item;
+        
+        console.log(item)
+        const { name, visibility, description, topics, language, homepage, git_url, owner} = item;
 
 
         let color = language == 'JavaScript' ? '#FCA708' : language == 'HTML' ? '#FC5608' : '#0864FC';

@@ -9,21 +9,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
          let repos = await getRepoInfo(`https://api.github.com/users/${userName}/repos`)
          .then(res => res)
-         let mostrarInfoUsuarios = await getRepoInfo(`https://api.github.com/users/${userName}/repos`)
-         console.log(mostrarInfoUsuarios);
 
+         let dataUsers = await getRepoInfo(`https://api.github.com/users/${userName}`).then(res => res)
+         
+         console.log(`Esto es ${dataUsers}`)
          showRepoInfo( repos, contenedorRepos );
-         showUserInfo( mostrarInfoUsuarios )
+         showDataUsers( dataUsers )
 
 })
 
-const showUserInfo = ( user) => {
-  console.log
-  mostrarInfoUser.innerHTML= ""
+const showDataUsers = ( item ) => { 
   mostrarInfoUser.innerHTML += `
-  <img src=${user.avatar_url}>
-  <h3> ${user.login} </h3>
-  <h3> ${user.name} </h3>
+  <img src=${item.avatar_url}>
+  <h4> ${item.login} </h4>
+  <h6> ${item.name} </h6>
   <button> Follow </button>
   <button> Sponsor </button>
   `
