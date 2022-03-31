@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', async () => {
          
          console.log(`Esto es ${dataUsers}`)
          showRepoInfo( repos, contenedorRepos );
-         showDataUsers( dataUsers )
+         loadDataUsers( dataUsers )
 
 })
 
-const showDataUsers = ( item ) => { 
+const loadDataUsers = ( item ) => { 
   mostrarInfoUser.innerHTML += `
   <img src=${item.avatar_url}>
   <h4> ${item.login} </h4>
