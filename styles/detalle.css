@@ -43,11 +43,9 @@ h4 {
     
 }
 #izquierda button{
+    position: absolute;
+    top: 57vh;  
     
-    
-    
-
-   
 }
 
 button{
